@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图插件</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<!--轮播图 start-->
+<div class="focus" id="focus">
+    <ul class="focuspic" id="slidePic">
+        <li><a href="#" target="_blank"><img src="./images/banner1.png"/></a></li>
+        <li><a href="#" target="_blank"><img src="./images/banner2.png" /></a></li>
+        <li><a href="#" target="_blank"><img src="./images/banner3.png" /></a></li>
+    </ul>
+</div>
+<!--轮播图 end-->
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript">
+    window.onload=function () {
+                //轮播图调用
+                autoSlide.init({
+                    "slideLi": document.getElementById("slidePic").children
+                }); //只是调用Init方法
+            }
+</script>
+</body>
+</html>
