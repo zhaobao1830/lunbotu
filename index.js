@@ -1,7 +1,7 @@
 (function () {
-    function autoSlide() {}
+    function AutoSlide() {}
 
-    autoSlide.prototype.init = function (initParam) {
+  AutoSlide.prototype.init = function (initParam) {
         //都在这里初始化
         this.dsq=null;
         //判断是手机还是电脑打开，选择初始化
@@ -11,7 +11,7 @@
             this.computerSlide(initParam);
         }
     }
-    autoSlide.prototype.computerSlide=function (param) {//电脑端初始化
+  AutoSlide.prototype.computerSlide=function (param) {//电脑端初始化
         var _this = this;//区分作用域
         var divEle = document.createElement("div");//创建一个图片列表box
         divEle.className = "slide-box";
@@ -54,7 +54,7 @@
         this.computerAuto();
     }
 
-    autoSlide.prototype.computerAuto=function () { //自动播放
+  AutoSlide.prototype.computerAuto=function () { //自动播放
         /*
          1、获取当前是第几个
          2、获取总共有多少个
@@ -78,10 +78,10 @@
             _this.computerAuto();
         },3000)
     }
-    autoSlide.prototype.phoneSlide=function () {//手机端初始化
+  AutoSlide.prototype.phoneSlide=function () {//手机端初始化
 
     }
-    autoSlide.prototype.isPhone = function () {
+  AutoSlide.prototype.isPhone = function () {
         var userAgentInfo = navigator.userAgent //查看浏览器用于 HTTP 请求的用户代理头的值
         var agents = ["Android", "iPhone",
             "SymbianOS", "Windows Phone",
@@ -96,7 +96,7 @@
         return flag
     }
 
-    var autoSlides = new autoSlide();
+    var autoSlides = new AutoSlide();
 
     window["autoSlide"] = autoSlides;
 })()  //自执行函数
